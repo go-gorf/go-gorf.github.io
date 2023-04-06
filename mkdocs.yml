@@ -1,5 +1,5 @@
 site_name: Golang Rest Framework
-repo_name: gorf
+repo_name: github.com/go-gorf/gorf
 repo_url: https://github.com/go-gorf/gorf
 edit_uri: 'https://github.com/go-gorf/gorf'
 theme:
@@ -15,6 +15,8 @@ theme:
     - content.code.annotation
     - content.code.copy
   language: en
+  icon:
+  repo: fontawesome/brands/github
   palette:
     - scheme: default
       toggle:
