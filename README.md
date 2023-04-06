@@ -1,2 +1,1 @@
-# go-gorf.github.io
-gorf docs
+# gorf docs
