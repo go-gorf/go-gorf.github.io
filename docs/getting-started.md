@@ -2,7 +2,7 @@
 
 Firstly, Create a new main package with following code
 
-``` go linenums="1" title="main.go" hl_lines="11 12"
+``` go title="main.go" 
 package main
 
 import (
@@ -26,7 +26,7 @@ func main() {
 
 Next, Create a settings.go file in the main package with the following code snippet
 
-``` go linenums="1" title="settings.go" hl_lines="11 12"
+``` go title="settings.go"
 package main
 
 import (
