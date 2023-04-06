@@ -4,22 +4,62 @@
 
 Django inspired Golang Rest Framework
 
-#### With a title
+Firstly, Create a new main package with following code
 
-``` py title="bubble_sort.py"
-def bubble_sort(items):
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i):
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
+``` go title="main.go" 
+package main
+
+import (
+	"log"
+
+	"github.com/go-gorf/gorf"
+	"github.com/go-gorf/gorf-contrib/auth"
+)
+
+func main() {
+	r := BootstrapRouter()
+	user := auth.User{}
+	println(user.Email)
+	err := r.Run()
+	if err != nil {
+		log.Fatal("Unable to create the gin server")
+	} // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+}
+
 ```
 
-#### With line numbers
+Next, Create a settings.go file in the main package with the following code snippet
 
-``` py linenums="1" hl_lines="2 3"
-def bubble_sort(items):
-    for i in range(len(items)):
-        for j in range(len(items) - 1 - i):
-            if items[j] > items[j + 1]:
-                items[j], items[j + 1] = items[j + 1], items[j]
+``` go title="settings.go"
+package main
+
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/go-gorf/gorf"
+	"github.com/go-gorf/auth"
+)
+
+// add all the apps
+var apps = []gorf.GorfApp{
+	&auth.AuthApp,
+}
+
+func LoadSettings() {
+	// jwt secret key
+	Settings.SecretKey = "GOo8Rs8ht7qdxv6uUAjkQuopRGnql2zWJu08YleBx6pEv0cQ09a"
+	Settings.DbConf = &SqliteBackend{
+		"db.sqlite",
+	}
+}
+
+// bootstrap server
+func BootstrapRouter() *gin.Engine {
+	gorf.Apps = append(apps)
+	LoadSettings()
+	gorf.InitializeDatabase()
+	gorf.SetupApps()
+	r := gin.Default()
+	gorf.RegisterApps(r)
+	return r
+}
 ```
