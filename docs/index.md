@@ -1,8 +1,19 @@
-# Homepage
+# Django inspired Golang Rest Framework
 
 [![Go](https://github.com/go-gorf/gorf/actions/workflows/go.yml/badge.svg)](https://github.com/go-gorf/gorf/actions/workflows/go.yml)
 
 Django inspired Golang Rest Framework
+
+## Install gorf
+```shell
+go get github.com/go-gorf/gorf
+```
+Install gorf auth app
+```shell
+go get github.com/go-gorf/auth
+```
+
+## main.go
 
 Firstly, Create a new main package with following code
 
@@ -28,6 +39,7 @@ func main() {
 
 ```
 
+## settings.go
 Next, Create a settings.go file in the main package with the following code snippet
 
 ``` go title="settings.go"
