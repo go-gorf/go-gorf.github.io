@@ -5,9 +5,10 @@ edit_uri: 'https://github.com/go-gorf/gorf'
 theme:
   name: material
   features:
-    - navigation.tabs
+    # - navigation.tabs
+    - navigation.tracking
     - navigation.sections
-    - toc.integrate
+    # - toc.integrate
     - navigation.top
     - search.suggest
     - search.highlight
@@ -41,6 +42,8 @@ extra:
       link: https://www.linkedin.com/in/vjtomvictor/
 
 markdown_extensions:
+  - toc:
+      permalink: true
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
