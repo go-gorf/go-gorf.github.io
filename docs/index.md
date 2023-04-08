@@ -1,7 +1,7 @@
 # Golang Rest Framework
 
 [![Go](https://github.com/go-gorf/gorf/actions/workflows/go.yml/badge.svg)](https://github.com/go-gorf/gorf/actions/workflows/go.yml)
-
+[![Go Reference](https://pkg.go.dev/badge/github.com/go-gorf/gorf.svg)](https://pkg.go.dev/github.com/go-gorf/gorf)  
 Django inspired Golang Rest Framework
 
 ## Installation
@@ -125,7 +125,11 @@ func Hello(ctx *gin.Context) {
 }
 
 ```
-## Devlopment 
+## Check the gorf app template repo
+
+https://github.com/go-gorf/template
+
+## Development 
 
 ```bash
 go mod edit -replace github.com/go-gorf/auth=../auth
