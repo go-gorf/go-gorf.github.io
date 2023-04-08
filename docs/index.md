@@ -146,5 +146,6 @@ func Hello(ctx *gin.Context) {
 ```
 ## Check the gorf app template repo
 
-https://github.com/go-gorf/template
+
+[https://github.com/go-gorf/template](https://github.com/go-gorf/template)
 
