@@ -70,13 +70,13 @@ func BootstrapRouter() *gin.Engine {
 }
 ```
 
-## Write your own apps  
+## Write your own apps
 
 Create a new package named "hello"
 
-add app.go file  
+add app.go file
 
-```
+``` go
 package hello
 
 import (
@@ -96,9 +96,9 @@ var HelloApp = gorf.GorfBaseApp{
 
 ```
 
-add urls.go file  
+add urls.go file
 
-```
+``` go
 package hello
 
 import "github.com/gin-gonic/gin"
@@ -108,9 +108,9 @@ func Urls(r *gin.Engine) {
 }
 ```
 
-add views.go file  
+add views.go file
 
-```
+``` go
 package hello
 
 import (
@@ -129,12 +129,12 @@ func Hello(ctx *gin.Context) {
 
 https://github.com/go-gorf/template
 
-## Development 
+## Development
 
 ```bash
 go mod edit -replace github.com/go-gorf/auth=../auth
 ```
-Or  
+Or
 
 ```
 replace github.com/go-gorf/gorf => ../gorf
