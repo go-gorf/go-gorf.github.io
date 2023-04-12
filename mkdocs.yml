@@ -2,6 +2,12 @@ site_name: Golang Rest Framework
 repo_name: github.com/go-gorf/gorf
 repo_url: https://github.com/go-gorf/gorf
 edit_uri: 'https://github.com/go-gorf/gorf'
+
+nav:
+    - Getting Started: index.md
+    - Developer Guide: development.md
+
+
 theme:
   name: material
   features:
