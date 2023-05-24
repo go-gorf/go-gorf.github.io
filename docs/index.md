@@ -49,7 +49,7 @@ Now go tho the project directory and run the project as follows
 cd hello
 go run .
 ```
-Now open the browser and go to http://localhost:8080/health
+Now open the browser and go to [http://localhost:8080/health](http://localhost:8080/health)
 
 ## Tutorial without cli
 
